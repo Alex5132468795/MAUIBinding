@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MauiApp5.Model"
+             x:Class="MauiApp5.MainPage">
+
+    <!--<ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Entry Text="{Binding MM.Text}">
+
+            </Entry>
+            <Label Text="{Binding MM.Text}">
+                
+            </Label>
+        </VerticalStackLayout>
+    </ScrollView>-->
+    <ScrollView>
+        <HorizontalStackLayout>
+            <Picker ItemsSource="{Binding LL}"  SelectedItem="{Binding MM}" ItemDisplayBinding="{Binding Name}" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                
+            </Picker>
+            <VerticalStackLayout>
+                <Entry x:Name="Fami" Text="{Binding MM.Fami}">
+                    
+                </Entry>
+                <Label>Фамилия</Label>
+                <Entry  x:Name="Name" Text="{Binding MM.Name}">
+
+                </Entry>
+                <Label>Имя</Label>
+                <Entry x:Name="Second" Text="{Binding MM.SecondName}">
+
+                </Entry>
+                <Label>Отчество</Label>
+                <Entry x:Name="Source" Text="{Binding MM.Sour}">
+
+                </Entry>
+                <Label>Сылка</Label>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label x:Name="labelFami" Text="{Binding MM.Fami}">
+
+                </Label>
+                <Label x:Name="labelName" Text="{Binding MM.Name}">
+
+                </Label>
+                <Label x:Name="labelSecond" Text="{Binding MM.SecondName}">
+
+                </Label>
+                <Image x:Name="ImSource" Source="{Binding MM.Sour}">
+                    
+                </Image>
+            </VerticalStackLayout>
+
+
+        </HorizontalStackLayout>
+    </ScrollView>
+
+</ContentPage>
